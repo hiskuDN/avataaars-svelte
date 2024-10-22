@@ -13,8 +13,8 @@
 	$: clotheType = 'Hoodie';
 	$: clotheColor = 'Red';
 	$: graphicType = '';
-	$: eyeType = 'Close';
-	$: eyebrowType = 'Angry';
+	$: eyeType = 'Squint';
+	$: eyebrowType = 'UpDown';
 	$: mouthType = 'Concerned';
 	$: skinColor = 'Light';
 
