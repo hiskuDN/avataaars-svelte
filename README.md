@@ -58,4 +58,4 @@ This project is licensed under the MIT License, the same as the original [Avataa
 ## Version
 
 `0.0.2` Implement all clothing alternatives to match the original Avataaars Generator
-`0.0.3` Add exports to index.ts
+`0.0.3x` Fix exports on index.ts to completely implement Avataaars style selection
