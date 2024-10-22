@@ -55,6 +55,7 @@ The original project provided a React component to easily integrate avatars into
 
 This project is licensed under the MIT License, the same as the original [Avataaars Generator](https://github.com/fangpenlin/avataaars-generator).
 
-## Version 0.0.2
+## Version
 
-Implement all clothing alternatives to match the original Avataaars Generator
+`0.0.2` Implement all clothing alternatives to match the original Avataaars Generator
+`0.0.3` Add exports to index.ts

@@ -1,6 +1,6 @@
 <!-- +page.svelte -->
 <script lang="ts">
-	import Avatar from '$lib/components/avataaar/avatar.svelte';
+	import Avatar from '$lib/components/avataaar/avatarComponent.svelte';
 	import { onMount } from 'svelte';
 
 	// Define props for testing
