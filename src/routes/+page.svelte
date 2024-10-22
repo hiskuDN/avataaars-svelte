@@ -15,7 +15,7 @@
 	$: graphicType = '';
 	$: eyeType = 'Squint';
 	$: eyebrowType = 'UpDown';
-	$: mouthType = 'Concerned';
+	$: mouthType = 'Vomit';
 	$: skinColor = 'Light';
 
 	onMount(() => {
