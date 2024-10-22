@@ -46,17 +46,6 @@ You can check out the original project here: [Avataaars Generator](http://getava
 
 4. Open your browser and navigate to `http://localhost:5000` to see the app running.
 
-### Building for Production
-
-To create an optimized production build, run:
-
-```bash
-yarn build
-# or
-npm run build
-```
-
-The production-ready files will be located in the `public` folder, which can be deployed to any static hosting platform.
 
 ## React Alternative
 
@@ -65,3 +54,7 @@ The original project provided a React component to easily integrate avatars into
 ## License
 
 This project is licensed under the MIT License, the same as the original [Avataaars Generator](https://github.com/fangpenlin/avataaars-generator).
+
+## Version 0.0.2
+
+Implement all clothing alternatives to match the original Avataaars Generator
