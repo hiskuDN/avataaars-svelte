@@ -1,58 +1,67 @@
-# create-svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# Svelte Avataaars Generator
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+Svelte Avataaars Generator is a reimplementation of the original Avataaars generator, originally developed by Fang-Pen Lin in React and designed by Pablo Stanley. This version is built with [Svelte](https://svelte.dev/) and TypeScript, offering a modern and lightweight alternative to the React-based implementation.
 
-## Creating a project
+You can check out the original project here: [Avataaars Generator](http://getavataaars.com).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
+
+- **Avatar customization**: Easily generate avatars with customizable options.
+- **Svelte-based**: Built with Svelte for a highly performant and reactive user experience.
+- **TypeScript support**: Fully typed for better developer experience and safer code.
+- **Web-based app**: Run the app locally or deploy it to generate avatars on the web.
+
+## Getting Started
+
+### Prerequisites
+
+- Make sure you have [Node.js](https://nodejs.org/) installed.
+- You'll also need [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
+
+### Running the App Locally
+
+1. Clone the repository:
+
+    ```bash
+    git clone <your-repo-url>
+    cd svelte-avataaars-generator
+    ```
+
+2. Install the dependencies:
+
+    ```bash
+    yarn install
+    # or
+    npm install
+    ```
+
+3. Start the development server:
+
+    ```bash
+    yarn dev
+    # or
+    npm run dev
+    ```
+
+4. Open your browser and navigate to `http://localhost:5000` to see the app running.
+
+### Building for Production
+
+To create an optimized production build, run:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
+yarn build
+# or
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+The production-ready files will be located in the `public` folder, which can be deployed to any static hosting platform.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## React Alternative
 
-## Publishing
+The original project provided a React component to easily integrate avatars into React applications. While this reimplementation focuses on Svelte, you can integrate the avatars generated from this app into any frontend project by exporting the avatars as SVGs.
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## License
 
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+This project is licensed under the MIT License, the same as the original [Avataaars Generator](https://github.com/fangpenlin/avataaars-generator).
