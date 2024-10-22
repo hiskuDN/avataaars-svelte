@@ -85,3 +85,83 @@ export const allOptions: Option[] = [
 	MouthOption,
 	SkinOption
 ];
+
+export const allStyles: { option: string; styles: string[] }[] = [
+	{
+		option: TopOption.key,
+		styles: ['NoHair']
+	},
+	{
+		option: AccessoriesOption.key,
+		styles: ['Blank']
+	},
+	{
+		option: HatColorOption.key,
+		styles: []
+	},
+	{
+		option: HairColorOption.key,
+		styles: []
+	},
+	{
+		option: FacialHairOption.key,
+		styles: ['Blank', 'BeardLight']
+	},
+	{
+		option: FacialHairColor.key,
+		styles: ['Auburn', 'Black', 'Blonde', 'Brown', 'BrownGolden', 'BrownDark', 'Platinum', 'Red']
+	},
+	{
+		option: ClotheOption.key,
+		styles: [
+			'BlazerShirt',
+			'BlazerSweater',
+			'CollarSweater',
+			'GraphicShirt',
+			'Hoodie',
+			'ShirtCrewNeck',
+			'ShirtScoopNeck',
+			'ShirtVNeck'
+		]
+	},
+	{
+		option: ClotheColorOption.key,
+		styles: [
+			'Black',
+			'Blue01',
+			'Blue02',
+			'Blue03',
+			'Gray01',
+			'Gray02',
+			'Heather',
+			'PastelBlue',
+			'PastelGreen',
+			'PastelOrange',
+			'PastelRed',
+			'PastelYellow',
+			'Pink',
+			'Red',
+			'White'
+		]
+	},
+	{
+		option: GraphicOption.key,
+		styles: ['Bat', 'Cumbia', 'Deer', 'Diamond', 'Hola', 'Pizza', 'Resist', 'Selena', 'Bear', 'SkullOutline']
+	},
+	{
+		option: EyesOption.key,
+		styles: ['Close', 'Cry', 'Default', 'Dizzy', 'EyeRoll', 'Happy', 'Hearts', 'Side', 'Squint', 'Surprised', 'Wink', 'WinkWacky']
+	},
+	{
+		option: EyebrowOption.key,
+		styles: ['Angry', 'AngryNatural', 'Default', 'DefaultNatural', 'FlatNatural', 'RaisedExcited', 'RaisedExcitedNatural', 'SadConcerned', 'SadConcernedNatural', 'UnibrowNatural', 'UpDown', 'UpDownNatural']
+	},
+	{
+		option: MouthOption.key,
+		styles: ['Concerned', 'Default', 'Disbelief', 'Eating', 'Grimace', 'Sad', 'ScreamOpen', 'Serious', 'Smile', 'Tongue', 'Twinkle', 'Vomit']
+	},
+	{
+		option: SkinOption.key,
+		styles: ['Tanned', 'Yellow', 'Pale', 'Light', 'Brown', 'DarkBrown', 'Black']
+	}
+];
