@@ -117,7 +117,6 @@ export const allStyles: { option: string; styles: string[] }[] = [
 			'BlazerShirt',
 			'BlazerSweater',
 			'CollarSweater',
-			'GraphicShirt',
 			'Hoodie',
 			'ShirtCrewNeck',
 			'ShirtScoopNeck',

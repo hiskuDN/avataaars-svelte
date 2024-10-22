@@ -59,3 +59,9 @@ This project is licensed under the MIT License, the same as the original [Avataa
 
 `0.0.2` Implement all clothing alternatives to match the original Avataaars Generator
 `0.0.3x` Fix exports on index.ts to completely implement Avataaars style selection
+
+## TODO
+
+- Implement the rest of the options
+- GraphicShirt and GraphicShirtColor bug fix
+- Update state automatically when changing style
