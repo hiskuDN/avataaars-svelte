@@ -22,10 +22,12 @@
 	export let eyebrowType = '';
 	export let mouthType = '';
 	export let skinColor = '';
+	export let blobUrl = '';
 
 	// OptionContext
 	let optionContext = new OptionContext(allOptions);
 	$: blob = null;
+	$: blobUrl = '';
 
 	// Set context
 	setContext('optionContext', optionContext);
@@ -78,6 +80,7 @@
 	$: {
 		if (blob && getBlob) {
 			getBlob(blob);
+			blobUrl = URL.createObjectURL(blob);
 		}
 	}
 </script>

@@ -19,10 +19,6 @@
 	let avatarRef: SVGSVGElement;
 
 	onMount(async () => {
-		if (avatarRef) {
-			blob = await svgToBlob(avatarRef);
-		} 
-		
 		const uniqueId = () => 'id-' + Math.random().toString(36).substr(2, 9);
 		path1 = uniqueId();
 		path2 = uniqueId();
@@ -30,6 +26,12 @@
 		mask1 = uniqueId();
 		mask2 = uniqueId();
 		mask3 = uniqueId();
+
+		setTimeout(async () => {
+			if (avatarRef) {
+				blob = await svgToBlob(avatarRef);
+			}
+		}, 1000);
 	});
 
 	// Determine if the avatar style is 'Circle'

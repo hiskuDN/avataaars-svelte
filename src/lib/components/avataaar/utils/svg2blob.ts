@@ -1,6 +1,4 @@
-export async function svgToBlob(avatarRef: SVGSVGElement | null): Promise<Blob | null> {
-    if (!avatarRef) return null;
-
+export async function svgToBlob(avatarRef: SVGSVGElement): Promise<Blob> {
     // Serialize the SVG element to a string
     const svgString = new XMLSerializer().serializeToString(avatarRef);
     // Create a Blob from the serialized SVG string
