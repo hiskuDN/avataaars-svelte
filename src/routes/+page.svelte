@@ -1,9 +1,6 @@
 <!-- +page.svelte -->
 <script lang="ts">
 	import Avatar from '$lib/components/avataaar/avatarComponent.svelte';
-	import { onMount } from 'svelte';
-
-	let blob: Blob | null = null;
 
 	// Define props for testing
 	$: avatarStyle = 'Circle';
@@ -20,14 +17,16 @@
 	$: mouthType = 'Smile';
 	$: skinColor = 'Light';
 
-	onMount(async () => {
-		
-	});
+
+	export function getBlob(blob: Blob) {
+		console.log('Blob received:', blob);
+	}
 </script>
 
 <main>
 	<h1>Test Avatar Component</h1>
 	<Avatar
+		{getBlob}
 		{avatarStyle}
 		{topType}
 		{accessoriesType}
