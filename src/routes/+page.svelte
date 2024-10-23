@@ -1,6 +1,7 @@
 <!-- +page.svelte -->
 <script lang="ts">
 	import Avatar from '$lib/components/avataaar/avatarComponent.svelte';
+	import { onMount } from 'svelte';
 
 	// Define props for testing
 	$: avatarStyle = 'Circle';
@@ -14,18 +15,26 @@
 	$: graphicType = '';
 	$: eyeType = 'Squint';
 	$: eyebrowType = 'UpDown';
-	$: mouthType = 'Smile';
+	$: mouthType = 'Sad';
 	$: skinColor = 'Light';
 
+	let blobUrl: string;
 
 	export function getBlob(blob: Blob) {
-		console.log('Blob received:', blob);
+		console.log('Blob received:', blob, blobUrl);
+	}
+
+	$: {
+		if (blobUrl) {
+			console.log('Blob URL:', blobUrl);
+		}
 	}
 </script>
 
 <main>
 	<h1>Test Avatar Component</h1>
 	<Avatar
+		bind:blobUrl
 		{getBlob}
 		{avatarStyle}
 		{topType}

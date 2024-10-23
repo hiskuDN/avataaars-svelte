@@ -66,3 +66,4 @@ This project is licensed under the MIT License, the same as the original [Avataa
 - GraphicShirt and GraphicShirtColor bug fix
 - Update state automatically when changing style
 - ~~Expose getBlob function to user~~
+- ~~Expose blobUrl to user~~
