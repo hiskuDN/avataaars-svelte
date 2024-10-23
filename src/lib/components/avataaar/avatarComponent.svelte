@@ -5,6 +5,7 @@
 	import { allOptions, OptionContext } from './options/options.js';
 
 	// Props
+	export let getBlob: (blob: Blob) => void;
 	export let avatarStyle = '';
 	export let className = '';
 	export let style: string = '';
@@ -24,7 +25,7 @@
 
 	// OptionContext
 	let optionContext = new OptionContext(allOptions);
-	let blob: Blob | null = null;
+	$: blob = null;
 
 	// Set context
 	setContext('optionContext', optionContext);
@@ -70,16 +71,15 @@
 		optionContext.setData(data);
 	}
 
-	
-	function getBlob() {
-		if (blob) {
-			return blob;
-		}
-	}
-
 	onMount(() => {
 		updateOptionContext();
 	});
+
+	$: {
+		if (blob) {
+			getBlob(blob);
+		}
+	}
 </script>
 
-<Avatar bind:blob={blob} {avatarStyle} {style} {className} />
+<Avatar bind:blob {avatarStyle} {style} {className} />
