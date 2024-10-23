@@ -1,6 +1,6 @@
 <!-- +page.svelte -->
 <script lang="ts">
-	import Avatar from '$lib/components/avataaar/avatarComponent.svelte';
+	import AvatarComponent from '$lib/components/avataaar/avatarComponent.svelte';
 	import { onMount } from 'svelte';
 
 	// Define props for testing
@@ -33,7 +33,7 @@
 
 <main>
 	<h1>Test Avatar Component</h1>
-	<Avatar
+	<AvatarComponent
 		bind:blobUrl
 		{getBlob}
 		{avatarStyle}
