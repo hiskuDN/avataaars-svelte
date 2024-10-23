@@ -5,7 +5,7 @@
 	import { allOptions, OptionContext } from './options/options.js';
 
 	// Props
-	export let getBlob: (blob: Blob) => void;
+	export let getBlob: ((blob: Blob) => void) | null = null;
 	export let avatarStyle = '';
 	export let className = '';
 	export let style: string = '';
@@ -76,7 +76,7 @@
 	});
 
 	$: {
-		if (blob) {
+		if (blob && getBlob) {
 			getBlob(blob);
 		}
 	}
