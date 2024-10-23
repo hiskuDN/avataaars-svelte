@@ -6,16 +6,23 @@
 	import Top from './top/top.svelte';
 	import Accessories from './top/accessories/accessories.svelte';
 	import Skin from './skin/skin.svelte';
+	import { svgToBlob } from '../utils/svg2blob.js';
 
 	// Props
 	export let avatarStyle = 'Circle';
 	export let className = '';
 	export let style: string = '';
+	export let blob: Blob | null = null;
 
 	// Generate unique IDs for paths and masks
 	let path1: string, path2: string, path3: string, mask1: string, mask2: string, mask3: string;
+	let avatarRef: SVGSVGElement;
 
-	onMount(() => {
+	onMount(async () => {
+		if (avatarRef) {
+			blob = await svgToBlob(avatarRef);
+		} 
+		
 		const uniqueId = () => 'id-' + Math.random().toString(36).substr(2, 9);
 		path1 = uniqueId();
 		path2 = uniqueId();
@@ -30,6 +37,7 @@
 </script>
 
 <svg
+	bind:this={avatarRef}
 	{style}
 	class={className}
 	width="264px"

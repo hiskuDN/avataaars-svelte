@@ -24,6 +24,7 @@
 
 	// OptionContext
 	let optionContext = new OptionContext(allOptions);
+	let blob: Blob | null = null;
 
 	// Set context
 	setContext('optionContext', optionContext);
@@ -69,9 +70,16 @@
 		optionContext.setData(data);
 	}
 
+	
+	function getBlob() {
+		if (blob) {
+			return blob;
+		}
+	}
+
 	onMount(() => {
 		updateOptionContext();
 	});
 </script>
 
-<Avatar {avatarStyle} {style} {className} />
+<Avatar bind:blob={blob} {avatarStyle} {style} {className} />

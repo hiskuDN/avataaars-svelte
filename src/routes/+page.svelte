@@ -3,6 +3,8 @@
 	import Avatar from '$lib/components/avataaar/avatarComponent.svelte';
 	import { onMount } from 'svelte';
 
+	let blob: Blob | null = null;
+
 	// Define props for testing
 	$: avatarStyle = 'Circle';
 	$: topType = 'NoHair';
@@ -15,11 +17,11 @@
 	$: graphicType = '';
 	$: eyeType = 'Squint';
 	$: eyebrowType = 'UpDown';
-	$: mouthType = 'Vomit';
+	$: mouthType = 'Smile';
 	$: skinColor = 'Light';
 
-	onMount(() => {
-		console.log('Avatar component mounted');
+	onMount(async () => {
+		
 	});
 </script>
 
