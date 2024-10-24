@@ -1,13 +1,12 @@
 <!-- +page.svelte -->
 <script lang="ts">
 	import AvatarComponent from '$lib/components/avataaar/avatarComponent.svelte';
-	import { onMount } from 'svelte';
 
 	// Define props for testing
 	$: avatarStyle = 'Circle';
-	$: topType = 'NoHair';
+	$: topType = 'ShortHairSides';
 	$: accessoriesType = 'Blank';
-	$: hairColor = 'Brown';
+	$: hairColor = 'Auburn';
 	$: facialHairType = 'Blank';
 	$: facialHairColor = '';
 	$: clotheType = 'Hoodie';

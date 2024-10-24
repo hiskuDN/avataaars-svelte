@@ -89,7 +89,35 @@ export const allOptions: Option[] = [
 export const allStyles: { option: string; styles: string[] }[] = [
 	{
 		option: TopOption.key,
-		styles: ['NoHair']
+		styles: [
+			'NoHair',
+			'LongHairBigHair',
+			'LongHairBob',
+			'LongHairBun',
+			'LongHairCurly',
+			'LongHairCurvy',
+			'LongHairDreads',
+			'LongHairFrida',
+			'LongHairFro',
+			'LongHairFroBand',
+			'LongHairNotTooLong',
+			'LongHairShavedSides',
+			'LongHairMiaWallace',
+			'LongHairStraight',
+			'LongHairStraight2',
+			'LongHairStraightStrand',
+			'ShortHairDreads01',
+			'ShortHairDreads02',
+			'ShortHairFrizzle',
+			'ShortHairShaggyMullet',
+			'ShortHairShortCurly',
+			'ShortHairShortFlat',
+			'ShortHairShortRound',
+			'ShortHairShortWaved',
+			'ShortHairSides',
+			'ShortHairTheCaesar',
+			'ShortHairTheCaesarSidePart'
+		]
 	},
 	{
 		option: AccessoriesOption.key,
@@ -101,7 +129,18 @@ export const allStyles: { option: string; styles: string[] }[] = [
 	},
 	{
 		option: HairColorOption.key,
-		styles: []
+		styles: [
+			'Auburn',
+			'Black',
+			'Blonde',
+			'BlondeGolden',
+			'Brown',
+			'BrownDark',
+			'PastelPink',
+			'Platinum',
+			'Red',
+			'SilverGray'
+		]
 	},
 	{
 		option: FacialHairOption.key,
@@ -145,19 +184,69 @@ export const allStyles: { option: string; styles: string[] }[] = [
 	},
 	{
 		option: GraphicOption.key,
-		styles: ['Bat', 'Cumbia', 'Deer', 'Diamond', 'Hola', 'Pizza', 'Resist', 'Selena', 'Bear', 'SkullOutline']
+		styles: [
+			'Bat',
+			'Cumbia',
+			'Deer',
+			'Diamond',
+			'Hola',
+			'Pizza',
+			'Resist',
+			'Selena',
+			'Bear',
+			'SkullOutline'
+		]
 	},
 	{
 		option: EyesOption.key,
-		styles: ['Close', 'Cry', 'Default', 'Dizzy', 'EyeRoll', 'Happy', 'Hearts', 'Side', 'Squint', 'Surprised', 'Wink', 'WinkWacky']
+		styles: [
+			'Close',
+			'Cry',
+			'Default',
+			'Dizzy',
+			'EyeRoll',
+			'Happy',
+			'Hearts',
+			'Side',
+			'Squint',
+			'Surprised',
+			'Wink',
+			'WinkWacky'
+		]
 	},
 	{
 		option: EyebrowOption.key,
-		styles: ['Angry', 'AngryNatural', 'Default', 'DefaultNatural', 'FlatNatural', 'RaisedExcited', 'RaisedExcitedNatural', 'SadConcerned', 'SadConcernedNatural', 'UnibrowNatural', 'UpDown', 'UpDownNatural']
+		styles: [
+			'Angry',
+			'AngryNatural',
+			'Default',
+			'DefaultNatural',
+			'FlatNatural',
+			'RaisedExcited',
+			'RaisedExcitedNatural',
+			'SadConcerned',
+			'SadConcernedNatural',
+			'UnibrowNatural',
+			'UpDown',
+			'UpDownNatural'
+		]
 	},
 	{
 		option: MouthOption.key,
-		styles: ['Concerned', 'Default', 'Disbelief', 'Eating', 'Grimace', 'Sad', 'ScreamOpen', 'Serious', 'Smile', 'Tongue', 'Twinkle', 'Vomit']
+		styles: [
+			'Concerned',
+			'Default',
+			'Disbelief',
+			'Eating',
+			'Grimace',
+			'Sad',
+			'ScreamOpen',
+			'Serious',
+			'Smile',
+			'Tongue',
+			'Twinkle',
+			'Vomit'
+		]
 	},
 	{
 		option: SkinOption.key,
