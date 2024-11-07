@@ -3,6 +3,7 @@
 	import { onMount, setContext } from 'svelte';
 	import Avatar from './avatar/avatar.svelte';
 	import { allOptions, OptionContext } from './options/options.js';
+	import { svgToBlob } from './utils/svg2blob.js';
 
 	// Props
 	export let getBlob: ((blob: Blob) => void) | null = null;
@@ -23,10 +24,11 @@
 	export let mouthType = '';
 	export let skinColor = '';
 	export let blobUrl = '';
+	let avatarRef: SVGSVGElement;
 
 	// OptionContext
 	let optionContext = new OptionContext(allOptions);
-	$: blob = null;
+	let blob: Blob | null = null;
 	$: blobUrl = '';
 
 	// Set context
@@ -73,8 +75,25 @@
 		optionContext.setData(data);
 	}
 
-	onMount(() => {
+	// Function to wait for avatarRef to be available
+	function waitForAvatarRef(): Promise<void> {
+		return new Promise((resolve) => {
+			const checkRef = setInterval(() => {
+				if (avatarRef) {
+					clearInterval(checkRef);
+					resolve();
+				}
+			}, 50);
+		});
+	}
+
+	onMount(async () => {
 		updateOptionContext();
+
+		// Wait for avatarRef to be ready and then create the blob
+		await waitForAvatarRef();
+		blob = await svgToBlob(avatarRef);
+		getBlob && getBlob(blob);
 	});
 
 	$: {
@@ -85,4 +104,4 @@
 	}
 </script>
 
-<Avatar bind:blob {avatarStyle} {style} {className} />
+<Avatar bind:avatarRef {avatarStyle} {style} {className} />
